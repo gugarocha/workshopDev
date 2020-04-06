@@ -38,7 +38,7 @@ db.serialize(function() {/*
         if (err) return console.log(err)
 
         console.log(this)
-    })*/
+    })
     
     // Deletar dados da tabela
     db.run(`DELETE FROM ideas WHERE id=?`, [12], function(err) {
@@ -52,7 +52,7 @@ db.serialize(function() {/*
         if (err) return console.log(err)
 
         console.log(rows)
-    })
+    })*/
 })
 
 module.exports = db
