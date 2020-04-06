@@ -22,6 +22,7 @@ function checkFields(event) {
     const isEmpty = valueToCheck.find(function(value) {
         const checkIfIsString = typeof event.target[value].value === "string"
         const checkIfIsEmpty = !event.target[value].value.trim()
+        // O .trim() remove os espaços inicias e finais de cada string
 
         if (checkIfIsString && checkIfIsEmpty) {
             return true
@@ -29,7 +30,7 @@ function checkFields(event) {
     })
 
     if (isEmpty){
-        event.preventDefault()
+        event.preventDefault() // Previne o comportamento padrão
         alert("Por favor, preencha todos os campos!")
     }
 }
