@@ -38,21 +38,21 @@ db.serialize(function() {/*
         if (err) return console.log(err)
 
         console.log(this)
-    })
-
+    })*/
+    
     // Deletar dados da tabela
-    db.run(`DELETE FROM ideas WHERE id=?`, [1], function(err) {
+    db.run(`DELETE FROM ideas WHERE id=?`, [12], function(err) {
         if (err) return console.log(err)
 
         console.log("DELETEI", this)
     })
-
+    
     // Consultar dados na tabela:
     db.all(`SELECT * FROM ideas`, function(err, rows) {
         if (err) return console.log(err)
 
         console.log(rows)
-    })*/
+    })
 })
 
 module.exports = db
