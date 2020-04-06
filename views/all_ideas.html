@@ -9,7 +9,9 @@
         <div class="content">
             <header>
                 <h3> {{idea.title}} </h3>
-                <h3 id="delete"> X </h3>
+                {% if bodyId == "page-ideas" %}
+                    <h3 id="delete"> X </h3>
+                {% endif %}
             </header>
             
             <p> {{idea.category}} </p>
