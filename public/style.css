@@ -127,18 +127,20 @@ footer a {
     margin: 0;
 }
 
-.idea #delete {
+.idea .delete {
     color: #777;
 
     transition: 400ms;
 }
 
-.idea #delete:hover {
-    cursor: pointer;
+.idea .delete:hover {
     color: #FF5874;
+
+    cursor: pointer;
+    transition: 400ms;
 }
 
-.deia p {
+.ideia p {
     margin: 8px 0;
     color: #777;
 }
@@ -267,6 +269,65 @@ form button:hover {
 
 #modal.hide {
     opacity: 0;
+    visibility: hidden;
+}
+
+/* MODAL DELETE */
+#modalDelete {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    z-index: 99999;
+    transition: 400ms;
+}
+
+#modalDelete #content {
+    width: 400px;
+
+    background-color: #FF5874;
+    color: #fff;
+    text-align: center;
+
+    position: relative;
+
+    margin: 10% auto;
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+
+#modalDelete button {
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 6px;
+    margin-right: 15px;
+    padding: 5px;
+    text-decoration: none;
+
+    transition: none;
+}
+
+#modalDelete button:hover {
+    background-color: #0984E3;
+    color: #fff;
+}
+
+#modalDelete a {
+    color: #fff;
+}
+
+#modalDelete.hide {
     visibility: hidden;
 }
 

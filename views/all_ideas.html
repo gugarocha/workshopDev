@@ -1,16 +1,17 @@
 {% for idea in ideas %}
     <div class="idea">
+        {% set id = idea.id %}
 
         <img
-            src="{{idea.image}}"
-            alt="Imagem de {{idea.titel}}"
+        src="{{idea.image}}"
+        alt="Imagem de {{idea.titel}}"
         >
         
         <div class="content">
             <header>
                 <h3> {{idea.title}} </h3>
                 {% if bodyId == "page-ideas" %}
-                    <h3 id="delete"> X </h3>
+                    <h3 id="{{id}}" class="delete"> X </h3>
                 {% endif %}
             </header>
             
@@ -23,4 +24,16 @@
             <a href="{{idea.link}}" target="__blanck"> Ir para a ideia </a>
         </div>
     </div>
-{% endfor %}
+    {% endfor %}
+
+<!--
+    {% include "modalDelete.html" %}
+-->
+<!--
+<div id="modalDelete" class="hide">
+    <div id="content">
+        <h2>Tem certeza que deseja excluir essa ideia?</h2>
+        <a id="url" href="">Confirmar</a>
+        <button onclick="modalDelete(event)">Voltar</button>
+    </div>
+</div>-->

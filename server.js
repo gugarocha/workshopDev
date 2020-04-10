@@ -89,5 +89,16 @@ server.post("/", function(req, res) {
     })
 })
 
+server.get("/ideias/:id", function(req, res){
+    db.run(`DELETE FROM ideas WHERE id=?`, [parseInt(req.params.id)], function(err) {
+        if (err) {
+            console.log(err)
+            return res.send("ERRO NO BANCO DE DADOS!")
+        }
+
+        return res.redirect("/ideias")
+    })
+})
+
 // Liguei meu servidor na porta 3000
 server.listen(3000)
