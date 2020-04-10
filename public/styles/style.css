@@ -1,0 +1,106 @@
+body {
+    background: #e5e5e5; /* cor de fundo */
+    color: #25282B; /* cor da fonte */ 
+    font-family: "Montserrat", sans-serif;
+
+    margin: 0; /* margem (por padrão 8px) */
+}
+
+body.hideScroll {
+    overflow: hidden;
+}
+
+#container {
+    width: 80%; /* largura (ocupa 80% da largura da caixa #container) */
+    max-width: 980px; /* largura máximo (limite de tamanho) */ 
+
+    margin: 40px auto;
+
+    display: flex; /* tela (flex: divide, lado a lado, os filhos da tag mãe, nesse caso a div com id container) */
+}
+
+
+a {
+    color: #FF5874;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, .description {
+    font-size: 16px; /* tamanho da fonte */
+    line-height: 24px; /* altura da linha */
+    letter-spacing: 0.1px;
+}
+
+#intro {
+    width: 300px;
+
+    margin-right: 64px;
+}
+
+main {
+    margin: 32px 0; /* margem (32px em cima e em baixo e 0 nas laterais) */
+}
+
+button {
+    background: none;
+    color: #FF5874;
+    border: none; /* borda */
+
+    font-size: 14px;
+    font-weight: bold;  /* espessura da fonte */
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    cursor: pointer; /* muda a seta do mouse */
+    outline: none; /* borda que aparece ao clickar */
+
+    transition: 400ms; /* transição */
+}
+
+button:hover {
+    text-decoration: underline; /* decoração do texto (underline = sublinhado) */
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 32px;
+}
+
+.fat {
+    color: #fff;
+    background: #FF5874;
+
+    width: 150px; /* largura */
+    height: 40px; /* altura */
+
+    border-radius: 6px; /* borda arredondada */
+    box-shadow: 0 8px 16px rgba(255, 0, 92, 0.16); /* sombra da caixa
+    (0 para o lado, 8px para baixo, 16px de blor(borrado) e a cor) */
+}
+
+.fat:hover {
+    background: rgb(238, 52, 83);
+    text-decoration: none;
+}
+
+footer {
+    color: #777;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    
+    text-align: center;
+}
+
+footer a {
+    opacity: 0.7;
+}
